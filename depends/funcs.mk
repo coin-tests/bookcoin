@@ -33,10 +33,6 @@ define fetch_file
     ( $(call fetch_file_inner,$(1),$(2),$(3),$(4),$(5))))
 endef
 
-define int_get_build_recipe_hash
-$(eval $(1)_recipe_hash:=$(shell echo -n "$($(1)_all_file_checksums)" | $(build_SHA256SUM) | cut -d" " -f1))
-endef
-
 define int_get_build_id
 $(eval $(1)_dependencies += $($(1)_$(host_arch)_$(host_os)_dependencies) $($(1)_$(host_os)_dependencies))
 $(eval $(1)_all_dependencies:=$(call int_get_all_dependencies,$(1),$($($(1)_type)_native_toolchain) $($(1)_dependencies)))
