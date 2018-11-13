@@ -51,7 +51,6 @@ $(1)_staging_prefix_dir:=$$($(1)_staging_dir)$($($(1)_type)_prefix)
 $(1)_extract_dir:=$(base_build_dir)/$(host)/$(1)/$($(1)_version)-$($(1)_build_id)
 $(1)_download_dir:=$(base_download_dir)/$(1)-$($(1)_version)
 $(1)_build_dir:=$$($(1)_extract_dir)/$$($(1)_build_subdir)
-$(1)_cached_checksum:=$(BASE_CACHE)/$(host)/$(1)/$(1)-$($(1)_version)-$($(1)_build_id).tar.gz.hash
 $(1)_patch_dir:=$(base_build_dir)/$(host)/$(1)/$($(1)_version)-$($(1)_build_id)/.patches-$($(1)_build_id)
 $(1)_prefixbin:=$($($(1)_type)_prefix)/bin/
 $(1)_cached:=$(BASE_CACHE)/$(host)/$(1)/$(1)-$($(1)_version)-$($(1)_build_id).tar.gz
